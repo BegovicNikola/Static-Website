@@ -1,0 +1,5 @@
+User-agent:*
+Disallow:/*?
+Disallow:/images/
+
+Sitemap: http://sajtovistudenata.ict.edu.rs/42_17/sitemap.xml

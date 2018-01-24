@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+<channel>
+  <title>Trinity college library</title>
+  <link>http://sajtovistudenata.ict.edu.rs/42_17</link>
+  <description>Welcome to the web page of the oldest library in Ireland.</description>
+  <item>
+    <title>Daily news</title>
+    <link>http://sajtovistudenata.ict.edu.rs/42_17/index.html</link>
+    <description>International education and humanitarian related news.</description>
+  </item>
+  <item>
+    <title>Historical facts</title>
+    <link>http://sajtovistudenata.ict.edu.rs/42_17/index.html</link>
+    <description>Historical facts about the Trinity college library.</description>
+  </item>
+</channel>
+</rss>

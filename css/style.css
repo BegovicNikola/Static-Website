@@ -1,0 +1,475 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	list-style-type: none;
+	/* Transition nije kompatibilan, takodje ni velicina vh */
+}
+
+.container{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.cleaner{
+	clear: both;
+}
+
+.fixed{				/* Ubaceno radi drugih stranica, jer je na home nav sticky */
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 999;
+}
+
+/* _______________LANDING PAGE HEADER_______________ */
+
+#header{
+	z-index: 0;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	background-image: url("../images/library.jpg");
+	height: 800px; /* Kompatibilnost za Chrome 20.0 & Mozilla 20.0 */
+	height: 100vh; /* Fallback visina od 800px */
+	width: 100%;   /* Da li u slucaju koriscenja max-height dobijamo isti efekat, ako na elementu height VH ne radi? */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #212121;
+	background-attachment: fixed;
+}
+
+#title{
+	z-index: 1;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	color: white;
+	-ms-font-family: "Cabin Sketch", cursive;
+	font-family: "Cabin Sketch", cursive;
+	/*Dodati fall back*/
+	font-size: 40px;
+	width: 80%;
+	text-align: center;
+}
+
+#title a h1{
+	color: #fff;
+	margin-bottom: 12px;
+}
+
+#title a h1:after{
+	content: '';
+	display: block;
+	margin: auto;
+	width: 0px;
+	height: 3px;
+	background: transparent;
+	transition: width .8s, background-color .8s;
+}
+
+#title a h1:hover:after{
+	width: 80%;
+	background-color: #fff;
+}
+
+#follow{		
+	margin-top: 6%;									
+	background-color: rgba(255, 255, 255, 0.4); 
+    border: 3px solid #fff;
+	border-radius: 8px;
+    color: white;
+    padding: 14px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	-ms-font-family: 'Lobster', cursive;
+	font-family: 'Lobster', cursive;
+    font-size: 24px;
+	box-shadow: 6px 10px rgba(255, 255, 255, 0.2);
+	outline: none;
+}
+
+#follow:hover{
+	background-color: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+}
+
+#follow:active{
+	margin-top: 7%;
+	margin-left: 6px;
+	font-size: 20px;
+	box-shadow: none;
+}
+
+/* _______________LANDING PAGE END_______________ */
+
+
+/*_______________NAVIGATION START_______________ */
+
+#placeholder{	/* Sprecava gubljenje prostora kada nav postane sticky */
+	height: 70px;
+	width: 100%;
+}
+
+nav{
+	width: 100%;
+	height: 50px;
+	background-color: rgb(255,162,33);
+	padding: 10px 0px;			
+}
+
+.sticky {			
+  position: fixed;
+  top: 0px;
+  width: 100%
+}
+
+#navigation{
+	float: left;
+}
+
+nav ul{
+	margin-top: 10px;
+}
+
+nav ul li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+nav ul li a{
+	color: #fff;
+	-ms-font-family: 'Lobster', cursive;
+	font-family: 'Lobster', cursive;
+	font-size: 20px;
+}
+
+nav ul li a:hover{
+	color: #212121;
+}
+
+#activePage{
+	color: #212121;
+}
+
+#social{
+	float: right;
+	margin-top: 10px;
+}
+
+#social a span{
+	font-size: 20px;
+	color: #fff;
+	margin-left: 10px;
+}
+
+#social a span:hover{
+	color: #212121;
+}
+
+/*_______________NAVIGATION END_______________ */
+
+
+/*_______________FOOTER START_______________ */
+
+footer{
+	color: white;
+	width: 100%;
+	background-color: #212121;
+	margin-top: 40px;
+	padding: 20px 0px 20px 0px;
+}
+
+#footerLeft{
+	float: left;
+	-ms-font-family: 'Cabin', sans-serif;
+	font-family: 'Cabin', sans-serif;
+}
+
+#footerLeft a{
+	color: #fff;
+}
+
+#footerLeft a:hover{
+	font-weight: bold;
+}
+
+#footerRight{
+	float: right;
+	-ms-font-family: 'Cabin', sans-serif;
+	font-family: 'Cabin', sans-serif;
+	text-align: right;
+}
+
+#footerRight li a{
+	color: #fff;
+}
+
+#footerRight li a:hover{
+	font-weight: bold;
+}
+
+#footerLast{
+	text-align: center;
+	-ms-font-family: 'Cabin', sans-serif;
+	font-family: 'Cabin', sans-serif;
+}
+
+/*_______________FOOTER END_______________ */
+
+
+/*_______________AUTHOR START_______________ */
+
+#authorImg{
+	width: 30%;
+	float: left;
+	margin-top: 100px;
+	margin-left: 35%;
+}
+
+#authorImg a img{
+	width: 100%;
+	border-radius: 100%;
+	border: 5px solid #bcbcbc;
+}
+
+#authorImg a img:hover{
+	opacity: 0.87;
+}
+
+#authorText{
+	text-align: center;
+	margin-top: 20px;
+	-ms-font-family: 'Cabin', sans-serif;
+	font-family: 'Cabin', sans-serif;
+	font-size: 18px;
+	color: #212121;
+}
+
+#authorText h1{
+	-ms-font-family: 'Cabin Sketch', sans-serif;
+	font-family: 'Cabin Sketch', sans-serif;
+	font-size: 54px;
+	color: #212121;
+	margin-bottom: 10px;
+}
+
+#authorText h1:after{
+	content: '';
+	display: block;
+	margin: auto;
+	width: 0px;
+	height: 3px;
+	background: transparent;
+	transition: width .7s, background-color .7s;
+}
+
+#authorText h1:hover:after{
+	width: 32%;
+	background-color: #212121;
+}
+
+#skills{					/* Kako iskoristiti FLEX u slucaju sledeca 3 child-a */
+	width: 100%;
+	margin-top: 40px;
+}
+
+.skill{
+	float: left;
+	width: 23%;
+	margin: 0px 1% 0px 1%;
+	text-align: center;
+	-ms-font-family: 'Cabin', sans-serif;
+	font-family: 'Cabin', sans-serif;
+	color: #212121;
+	border-bottom: 3px solid #dbdbdb;
+}
+
+.skillTitle{
+	background-color: #dbdbdb;
+	padding: 10px 0px 10px 0px;
+	border-radius: 5px;
+}
+
+.skill span{
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.skill h3{
+	margin-bottom: 10px;
+}
+
+.skill p{
+	text-align: left;
+	margin: 10px 10px;
+}
+
+/* _______________AUTHOR END_______________ */
+
+
+/* _______________GALLERY START_______________ */
+
+.galleryTitle{
+	margin-top: 40px;
+	-ms-font-family: 'Cabin', sans-serif;
+	font-family: 'Cabin', sans-serif;
+	color: #212121;
+	margin-left: 1%;
+}
+
+.galleryTitle:first-child{
+	margin-top: 100px;
+}
+
+.row{
+	margin-top: 20px;
+	width: 100%;
+	height: 180px;
+}
+
+.col{
+	width: 23%;
+	height: 100%;
+	float: left;
+	margin: 0px 1% 0px 1%; /* Boja za autore */
+	border-radius: 10px;
+}
+
+.col:first-child:hover{
+	box-shadow: -10px 10px 5px #888888;   /* Za autore na hover i opacity */
+}
+
+.col:nth-child(2):hover, .col:nth-child(3):hover{
+	box-shadow: 0px 10px 5px #888888;
+}
+
+.col:nth-child(4):hover{
+	box-shadow: 10px 10px 5px #888888;
+}
+
+.col img{
+	height: 100%;
+	width: 100%;
+	border-radius: 10px;
+}
+
+/* _______________GALLERY END_______________ */
+
+/*________________HOME START________________ */
+
+#content{
+	/*background-color: blue;*/
+	padding-top: 40px;
+	padding-bottom: 40px;
+	box-sizing: border-box;
+	-ms-font-family: 'Cabin', sans-serif;
+	font-family: 'Cabin', sans-serif;
+}
+
+.contentType{
+	height: 300px;
+	margin-top: 80px;
+}
+
+.contentType:first-child{
+	margin-top: 40px;
+}
+
+.contentImg{
+	height: 295px;
+	width: 295px;
+	border-radius: 50%;
+	border: 5px solid #bcbcbc;
+	transition: border-color 0.8s;
+}
+
+.last{
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+}
+
+.contentImg img{
+	height: 295px;
+	width: 295px;
+	border-radius: 50%;
+}
+
+.contentImg:hover{
+	border-color: rgb(255,162,33);
+}
+
+.odd{
+	float: left;
+}
+
+.even{
+	float: right;
+}
+
+.contentText{
+	/*background-color: grey;*/
+	width: 660px;
+	height: 100%;
+	color: #212121;
+}
+
+.last iframe{
+	border-radius: 50%;
+	border: none;
+	transition: border-radius .6s;
+}
+
+.last iframe:hover{
+	border-radius: 20px;
+}
+
+.contentText h2{
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+.contentText p{
+	margin-top: 12px;
+	text-align: center;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 8px 18px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 2px solid #bcbcbc;
+    border-radius: 8px;
+    box-sizing: border-box;
+	outline: none;
+}
+
+label{
+	font-size: 18px;
+	margin-left: 20px;
+	font-weight: bold;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: rgb(255, 148, 0);
+    color: white;
+    padding: 12px 20px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+	font-size: 18px;
+	font-weight: bold;
+	outline: none;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(255, 138, 0);
+	outline: none;
+}
